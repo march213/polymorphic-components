@@ -3,7 +3,7 @@ import { Text } from './components';
 function App() {
   return (
     <div className="App">
-      <Text as="p">some text here</Text>
+      <Text as="h1">some text here</Text>
     </div>
   );
 }

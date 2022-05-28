@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-interface Props<T> {
-  as?: T;
+type TextProps<C extends React.ElementType> = {
+  as?: C;
   children: React.ReactNode;
-}
+} & React.ComponentPropsWithoutRef<C>;
 
-export const Text = <T extends React.ElementType>({ as, children }: Props<T>) => {
+export const Text = <C extends React.ElementType>({ as, children }: TextProps<C>) => {
   const Component = as || 'span';
   return <Component>{children}</Component>;
 };

@@ -1,5 +1,19 @@
 import { Text } from './components';
 
+const Emphasis = ({ children }: { children: string }) => {
+  return (
+    <em
+      style={{
+        backgroundColor: 'yellow',
+        color: 'black',
+        fontSize: '32px',
+      }}
+    >
+      {children}
+    </em>
+  );
+};
+
 function App() {
   return (
     <div className="App">
@@ -8,6 +22,8 @@ function App() {
       <Text as="a" href="#">
         this is a link
       </Text>
+      <br />
+      <Text as={Emphasis}>this is an emphasised text</Text>
     </div>
   );
 }
